@@ -1,15 +1,13 @@
 on:
   pull_request:
     types: [opened, reopened]
-name: Slack Notification Demo
+name: Slack Notification
 jobs:
   slackNotification:
     if:  startsWith(github.head_ref, 'dependabot/')
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-    - uses: kceb/pull-request-url-action@v1
-      id: pr-url
     - uses: actions/checkout@v2
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
