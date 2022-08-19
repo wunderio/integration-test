@@ -16,6 +16,6 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: "dependable bot"
-        SLACK_MESSAGE: "Dependabot created new PR to: ${{ github.event.pull_request.title }}"
-        SLACK_FOOTER: "${{ steps.pr-url.outputs.url }}"
+        SLACK_MESSAGE: "Dependabot created new PR to: ${{ github.event.pull_request.title }} URL: ${{ github.event.pull_request.html_url }}"
+        SLACK_FOOTER: "${{ steps.pr-url.outputs.url }}   ${{ github.event.number }}"
         MSG_MINIMAL: true
