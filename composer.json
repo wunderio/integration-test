@@ -86,7 +86,7 @@
         "drupal/menu_link_attributes": "^1.2",
         "drupal/menu_multilingual": "^1.0@alpha",
         "drupal/metatag": "^1.16",
-        "drupal/migrate_plus": "5.3",
+        "drupal/migrate_plus": "6.0.0",
         "drupal/migrate_tools": "6.0",
         "drupal/monolog": "^2.0@beta",
         "drupal/ms_graph_api": "dev-3261727-d9-compatibility",
