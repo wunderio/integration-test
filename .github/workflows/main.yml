@@ -13,3 +13,7 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: "dependable bot"
+        SLACK_MESSAGE: ${{ github.event.pull_request.title }}
+        SLACK_FOOTER: ""
+        MSG_MINIMAL: true
