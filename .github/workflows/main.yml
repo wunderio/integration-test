@@ -16,7 +16,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: "dependable bot"
-        SLACK_MESSAGE: "<${{ github.event.pull_request.html_url }}|${{ github.event.pull_request.title }}>"
+        SLACK_MESSAGE: ":warning: <${{ github.event.pull_request.html_url }}|${{ github.event.pull_request.title }}>"
         SLACK_FOOTER: ""
         SLACK_TITLE: "Dependabot created a PR"
         MSG_MINIMAL: true
