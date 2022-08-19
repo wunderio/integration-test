@@ -1,11 +1,10 @@
 on:
   pull_request:
     types: [opened, reopened]
-    branches:
-    - 'dependabot/**'
 name: Slack Notification Demo
 jobs:
   slackNotification:
+    if:  startsWith(github.head_ref, 'dependabot/')
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
