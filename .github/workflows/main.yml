@@ -8,6 +8,8 @@ jobs:
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
+    - uses: kceb/pull-request-url-action@v1
+      id: pr-url
     - uses: actions/checkout@v2
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
@@ -15,5 +17,5 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: "dependable bot"
         SLACK_MESSAGE: "Dependabot created new PR to: ${{ github.event.pull_request.title }}"
-        SLACK_FOOTER: ""
+        SLACK_FOOTER: "${{ steps.pr-url.outputs.url }}"
         MSG_MINIMAL: true
